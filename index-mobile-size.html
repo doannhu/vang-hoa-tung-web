@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, user-scalable=no">
+  <title>Mobile UI with Embedded Iframes</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <style>
+    body {
+      background: #e0e0e0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    .phone-frame {
+      width: 375px;
+      height: 667px;
+      background: white;
+      border-radius: 30px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .phone-top-bar {
+      height: 24px;
+      background: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: #555;
+    }
+
+    .phone-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 10px;
+    }
+
+    .iframe-container {
+      margin-bottom: 20px;
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    iframe {
+      width: 100%;
+      height: 917px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    h2 {
+      font-size: 18px;
+      margin: 10px 0 5px;
+      text-align: center;
+      color: #333;
+    }
+
+    .swiper {
+      width: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+    }
+
+    .product-image {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .card-title {
+      font-size: 14px;
+      margin: 5px 0;
+    }
+
+    .cart-info span {
+      font-size: 12px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="phone-frame">
+    <div class="phone-top-bar">12:45</div>
+    <div class="phone-content">
+
+      <h2>Bảng giá hôm nay</h2>
+      <div class="iframe-container">
+        <iframe src="http://giavang.thietbinganhvang.com/share/3278a4-113?fbclid=IwAR3byBAi0Q9YnEU-i9heyNt7sk2zh8_UzcEBev_nXvRf510rjjj8ir2kq8A&fbclid=IwAR0WsHvVc_FioUCPq2M0Qfsi4F91EwllAOklQAr0a1YPjkvqMQD6K_avWPs" 
+        title="Bang gia vang hoa tung">
+        </iframe>
+      </div>
+
+      <h2>Bài viết Facebook</h2>
+      <div class="iframe-container">
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fvanghoatung%2Fposts%2Fpfbid02D2eYpzm2igdVzqqfvYeB8khsSDj5364CMeds8m8GY4613JCX6PonQHwZQqRsaynfl&show_text=true&width=500" 
+        width="500" 
+        height="500" 
+        style="border:none;overflow:hidden" 
+        scrolling="no" 
+        frameborder="0" 
+        allowfullscreen="true" 
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+      </div>
+
+      <h2>Sản phẩm bán chạy nhất</h2>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="images/resized photos/nhan-cuoi-review.png" alt="Nhẫn cưới">
+            <div>
+              <h3 class="card-title">Nhẫn cưới, nhẫn đôi</h3>
+              <div class="cart-info"><span>Trạm khắc đơn giản, đính hột hoặc trơn</span></div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="images/resized photos/vong-pandora.png" alt="Vòng Pandora">
+            <div>
+              <h3 class="card-title">Vòng charm Pandora</h3>
+              <div class="cart-info"><span>Charm độc lạ, dễ thương, cập nhập xu hướng</span></div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="images/resized photos/nhan-hot-xoan.png" alt="Nhẫn hột xoàn">
+            <div>
+              <h3 class="card-title">Nhẫn hột xoàn</h3>
+              <div class="cart-info"><span>Mẫu đa dạng: hột cao, thấp hoặc chìm.</span></div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="images/resized photos/Hoa-tai.png" alt="Hoa tai">
+            <div>
+              <h3 class="card-title">Hoa tai sang trọng</h3>
+              <div class="cart-info"><span>Hàng ngàn mẫu, đủ mọi mức giá</span></div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="images/resized photos/day-chuyen-nu.png" alt="Dây chuyền">
+            <div>
+              <h3 class="card-title">Dây chuyền và mặt dây</h3>
+              <div class="cart-info"><span>Đa dạng và phong phú</span></div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="images/resized photos/vong-tay.png" alt="Vòng tay">
+            <div>
+              <h3 class="card-title">Vòng tay, lắc tay</h3>
+              <div class="cart-info"><span>Trẻ trung và thoải mái</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
+
+</body>
+</html>
