@@ -52,8 +52,8 @@ CSS STRUCTURE:
 
 /* Fonts */
 :root {
-  --body-font: "Poppins", sans-serif;
-  --heading-font: 'Fjalla One', sans-serif;
+  --body-font: "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --heading-font: "Be Vietnam Pro", 'Fjalla One', sans-serif;
 }
 
 /*----------------------------------------------*/
@@ -75,13 +75,15 @@ html {
 }
 
 body {
-  
   font-family: var(--body-font);
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.6;
   color: var(--accent-color);
   margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 ul.inner-list li {
@@ -175,8 +177,11 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
   font-family: var(--heading-font);
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 /* - Section width
@@ -1153,4 +1158,162 @@ h5 {
 .my-div {
   visibility: hidden;
   height: 50px;
+}
+
+/* Image standardization */
+
+/* Featured products section */
+#featured-products .image-holder {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+#featured-products .image-holder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Collections section */
+#collections .product-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Blog/News section */
+#latest-blog .card-image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+#latest-blog .post-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Promotions section */
+#trending-products .image-holder {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+#trending-products .image-holder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Banner section */
+.banner-item {
+  background-position: center !important;
+  background-size: cover !important;
+}
+
+/* Ensure all product cards have consistent dimensions */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.product-card .cart-concern {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Add smooth transition for image zoom effects */
+.image-zoom-effect img {
+  transition: transform 0.3s ease;
+}
+
+/* Vietnamese text optimization */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.nav-link, .dropdown-item {
+  font-family: var(--body-font);
+  font-weight: 500;
+}
+
+.banner-content h1 {
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.card-title {
+  font-family: var(--heading-font);
+  font-weight: 600;
+}
+
+/* Ensure consistent font rendering for Vietnamese text */
+.text-uppercase {
+  font-family: var(--heading-font);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* Logo styling */
+.logo-round {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.footer-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+/* Responsive logo adjustments */
+@media screen and (max-width: 768px) {
+  .logo-round,
+  .footer-logo {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo-round,
+  .footer-logo {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* Footer logo container adjustments */
+.footer-menu .row {
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.footer-menu .row h5 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-menu .row h5 {
+    font-size: 1rem;
+  }
 }

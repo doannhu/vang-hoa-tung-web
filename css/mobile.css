@@ -1,0 +1,253 @@
+/* Mobile-specific styles */
+:root {
+  --safe-area-inset-top: env(safe-area-inset-top);
+  --safe-area-inset-bottom: env(safe-area-inset-bottom);
+}
+
+/* Force mobile layout on all devices */
+body.mobile-view {
+  max-width: 375px;
+  margin: 0 auto;
+  position: relative;
+  background: #f5f5f5;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Base mobile styles */
+html {
+  -webkit-text-size-adjust: 100%;
+  touch-action: manipulation;
+  background: #f5f5f5;
+}
+
+body {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+  padding-top: var(--safe-area-inset-top);
+  padding-bottom: var(--safe-area-inset-bottom);
+}
+
+/* Container constraints */
+.container-fluid {
+  max-width: 375px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0 auto;
+}
+
+/* Mobile navigation */
+.navbar {
+  max-width: 375px;
+  margin: 0 auto;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 0.5rem 1rem;
+}
+
+.navbar-brand img.logo {
+  height: 40px;
+  width: auto;
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0.5rem;
+}
+
+/* Mobile-optimized dropdown */
+.dropdown-menu {
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: none;
+  padding: 0.5rem;
+}
+
+.dropdown-item {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+}
+
+/* Touch-friendly buttons and links */
+.btn, .nav-link {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+/* Improved tap targets */
+.nav-link, .dropdown-item {
+  padding: 12px 16px;
+}
+
+/* Mobile-optimized search */
+.search-box {
+  position: fixed;
+  top: var(--safe-area-inset-top);
+  left: 0;
+  right: 0;
+  z-index: 1100;
+}
+
+.search-input {
+  border-radius: 20px;
+  padding: 12px 40px 12px 16px !important;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Mobile-optimized images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mobile-friendly grid adjustments */
+@media (max-width: 767px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  
+  .row {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+  
+  .col, [class*="col-"] {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+/* iOS-specific scrolling */
+.offcanvas-body {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Mobile-optimized product cards */
+.product-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Touch-friendly form elements */
+input, select, textarea {
+  font-size: 16px !important; /* Prevents iOS zoom on focus */
+  border-radius: 8px;
+  padding: 12px;
+}
+
+/* Add to cart button */
+.add-to-cart {
+  position: fixed;
+  bottom: var(--safe-area-inset-bottom);
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: white;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Pull to refresh animation */
+@keyframes pull-to-refresh {
+  from { transform: translateY(0); }
+  to { transform: translateY(50px); }
+}
+
+/* Mobile-optimized swiper */
+.swiper-container {
+  padding-bottom: 30px;
+}
+
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  margin: 0 4px;
+}
+
+/* Swiper adjustments */
+.swiper {
+  width: 100%;
+  max-width: 375px;
+}
+
+.banner-item {
+  height: auto !important;
+  min-height: 400px;
+  background-size: cover !important;
+}
+
+/* Facebook embeds */
+iframe {
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0 auto;
+}
+
+/* Additional mobile optimizations */
+.display-1 {
+  font-size: 2rem;
+}
+
+.display-2 {
+  font-size: 1.75rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+}
+
+/* Hide desktop-only elements */
+.d-lg-block {
+  display: none !important;
+}
+
+/* Force mobile menu */
+.navbar-collapse {
+  display: none;
+}
+
+.navbar-toggler {
+  display: block !important;
+}
+
+.offcanvas {
+  width: 100% !important;
+}
+
+/* Adjust spacing */
+.padding-large {
+  padding: 2rem 0;
+}
+
+.margin-large {
+  margin: 2rem 0;
+}
+
+/* Product card adjustments */
+.product-card {
+  margin-bottom: 1.5rem;
+}
+
+.image-holder {
+  height: auto;
+  max-height: 250px;
+  overflow: hidden;
+}
+
+/* Footer adjustments */
+footer {
+  text-align: center;
+}
+
+footer .col-lg-3 {
+  margin-bottom: 2rem;
+} 
